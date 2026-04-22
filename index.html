@@ -1,23 +1,544 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
+
+   <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "인천 인터넷 설치 현금지원 최저가 비교 서비스",
+      "url": "https://www.yourdomain.com/incheon-internet-installation",
+      "description": "2026년 인천 지역 최신 인터넷 설치 요금 및 사은품 혜택 비교 조회 서비스. SK, KT, LG U+ 등 주요 통신사별 최저가 견적을 실시간으로 비교하고 현금지원 혜택을 극대화하는 방법을 안내합니다.",
+      "mainEntity": {
+        "@type": "Service",
+        "name": "인천 지역 인터넷 가입 비교 견적 서비스",
+        "serviceType": "Internet Service Comparison",
+        "provider": {
+          "@type": "Organization",
+          "name": "인천인터넷설치 전문가 그룹"
+        },
+        "areaServed": "인천광역시",
+        "keywords": "인천인터넷설치, 인천 인터넷가입, 인터넷비교, 현금지원, 사은품, 요금할인, SK KT LG, 송도, 청라, 영종도"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "인천 인터넷 설치 시 통신사별 가격 차이가 나는 이유가 무엇인가요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "인터넷 요금은 기본적으로 통신사별 상품(기가인터넷, 100메가)에 따라 정해지지만, 실제 가격 차이는 결합 할인(휴대폰, IPTV), 약정 기간, 그리고 가입 채널별로 제공되는 사은품과 현금지원 금액에 따라 크게 달라집니다. 특히, 통신사마다 주력으로 하는 지역이나 프로모션 기간에 따라 현금지원 금액이 상이하므로 **인천인터넷설치**를 진행할 때는 반드시 **인터넷가입비교**를 통해 최저가를 찾아야 합니다. 2026년에는 SK, KT, LG U+ 등 주요 통신사가 AI 기술을 접목한 새로운 상품을 출시하며 경쟁이 심화될 것으로 예상됩니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "인천 지역별(송도, 청라, 구도심) 인터넷 설치 환경이 다른가요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "**인천**은 신도시(송도국제도시, 청라국제도시, 영종국제도시, 검단신도시)와 구도심이 혼재되어 있어 **인터넷 설치** 환경이 다양합니다. 신도시는 대부분 광케이블(FTTH)이 잘 구축되어 있어 기가인터넷 설치에 유리하지만, 일부 오래된 아파트나 주택가(예: 미추홀구, 동구)는 광케이블 설치가 어렵거나 속도 제약이 있을 수 있습니다. 따라서 **인천인터넷설치**를 신청하기 전에 거주지의 주소에 따른 **설치 가능 여부**와 **지원 속도**를 반드시 확인해야 합니다. 저희 **인천인터넷설치 전문 업체**에서는 주소지별 정확한 조회를 제공합니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "인터넷 설치 시 현금지원 사은품을 많이 받는 방법이 있나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "인터넷 설치 시 **현금지원**과 **사은품**은 가입 채널(본사, 대리점, 온라인 비교센터)마다 다릅니다. 온라인 **인터넷가입비교** 센터를 이용하면 여러 통신사의 혜택을 한눈에 비교할 수 있으며, 특히 **현금지원**을 최대로 제공하는 곳을 찾기 쉽습니다. 통신사 본사보다 대리점이, 오프라인 대리점보다 온라인 대리점이 경쟁적으로 더 많은 사은품을 제공하는 경우가 많습니다. 또한, 2026년에는 **AI** 기술을 활용한 챗봇 상담을 통해 고객 맞춤형 최적의 상품을 추천받고 추가 혜택을 받을 기회도 생길 수 있습니다."
+              }
+            }
+          ]
+        }
+    </script>
+
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary-color: #0F3B60; /* 짙은 네이비 (신뢰) */
+            --secondary-color: #3B7FB4; /* 블루 (기술) */
+            --accent-color: #4CAF50; /* 그린 (혜택/성장) */
+            --text-color: #333;
+            --bg-light: #F8F9FA; /* 부드러운 배경 */
+            --bg-highlight: #EBF3F8; /* 하이라이트 배경 */
+            --btn-cta: #FF6F00; /* 오렌지 (긴급/혜택) */
+            --shadow-subtle: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        /* Font Import */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+        /* Base Styles */
+        body { font-family: 'Noto Sans KR', sans-serif; margin: 0; padding: 0; background-color: var(--bg-light); color: var(--text-color); line-height: 1.8; font-size: 16px; word-break: keep-all; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Header */
+        header { background-color: #fff; padding: 15px 0; border-bottom: 1px solid #eee; box-shadow: var(--shadow-subtle); }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        header h1 { margin: 0; font-size: 1.8em; color: var(--primary-color); font-weight: 900; }
+        header h1 a { text-decoration: none; color: inherit; }
+        .logo-text { font-size: 1.1em; font-weight: 500; color: #555; display: block; margin-top: 5px; }
+
+        /* Hero Section */
+        .hero { background-image: url('https://images.pexels.com/photos/3434523/pexels-photo-3434523.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); background-size: cover; background-position: center; color: #fff; text-align: center; padding: 100px 20px 60px; position: relative; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(15, 59, 96, 0.7); z-index: 1; }
+        .hero .container { position: relative; z-index: 2; }
+        .hero h1 { font-size: 3.5em; margin-bottom: 20px; font-weight: 900; line-height: 1.3; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.4em; margin-bottom: 40px; font-weight: 300; opacity: 0.9; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
+
+        /* CTA Button */
+        .cta-btn { background-color: var(--btn-cta); color: #fff; padding: 18px 45px; font-size: 1.5em; font-weight: bold; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, transform 0.2s; box-shadow: 0 6px 15px rgba(255,111,0,0.4); text-decoration: none; display: inline-block; width: 100%; box-sizing: border-box; }
+        .cta-btn:hover { background-color: #E66100; transform: translateY(-2px); }
+
+        /* Comparison Form */
+        .compare-form-box { background-color: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); margin-top: -60px; position: relative; z-index: 10; border-top: 5px solid var(--accent-color); }
+        .compare-form-box h2 { color: var(--primary-color); text-align: center; margin-bottom: 25px; font-size: 2.2em; font-weight: 700; }
+        .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 500; color: var(--primary-color); font-size: 0.95em; }
+        .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 1em; transition: border-color 0.3s; }
+        .form-group input:focus, .form-group select:focus { border-color: var(--secondary-color); outline: none; box-shadow: 0 0 5px rgba(59, 127, 180, 0.3); }
+
+        /* Content Sections */
+        .content-section { padding: 80px 0; margin-top: 20px; }
+        .content-section h2 { font-size: 2.8em; color: var(--secondary-color); text-align: center; margin-bottom: 50px; font-weight: 700; position: relative; }
+        .content-section h2::after { content: ''; display: block; width: 80px; height: 4px; background-color: var(--accent-color); margin: 15px auto 0; border-radius: 2px; }
+        .content-section h3 { font-size: 1.8em; color: var(--primary-color); margin-top: 40px; margin-bottom: 15px; border-left: 5px solid var(--accent-color); padding-left: 15px; font-weight: 700; }
+
+        /* Feature Grid */
+        .feature-grid { display: flex; flex-wrap: wrap; justify-content: space-between; text-align: center; margin-top: 40px; }
+        .feature-grid .item { width: calc(33.33% - 40px); margin: 20px 10px; padding: 30px; background-color: #fff; border-radius: 12px; box-shadow: var(--shadow-subtle); transition: transform 0.3s; border-top: 5px solid var(--secondary-color); }
+        .feature-grid .item:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .feature-grid .item h3 { font-size: 1.4em; color: var(--primary-color); margin-top: 15px; margin-bottom: 10px; border-left: none; padding-left: 0; }
+        .feature-grid .item p { font-size: 1em; line-height: 1.6; color: #555; }
+        .icon-symbol { width: 60px; height: 60px; margin-bottom: 15px; color: var(--secondary-color); font-size: 3em; display: inline-block; }
+
+        /* Info Box */
+        .info-box { background-color: var(--bg-highlight); padding: 30px; border-radius: 10px; margin: 30px 0; border-left: 6px solid var(--secondary-color); }
+        .info-box p { margin: 0; font-size: 1.1em; color: #444; }
+
+        /* Data Table */
+        .data-table-container { overflow-x: auto; margin: 40px 0; }
+        .data-table { width: 100%; border-collapse: collapse; margin: 25px 0; font-size: 0.95em; text-align: left; box-shadow: var(--shadow-subtle); border-radius: 8px; overflow: hidden; }
+        .data-table caption { font-size: 1.3em; font-weight: 700; color: var(--primary-color); padding: 15px 0; }
+        .data-table th, .data-table td { padding: 15px; border: 1px solid #f0f0f0; }
+        .data-table thead tr { background-color: var(--secondary-color); color: #fff; text-align: center; }
+        .data-table tbody tr:nth-child(even) { background-color: #f9f9f9; }
+        .data-table tbody tr:hover { background-color: #f1f1f1; }
+
+        /* FAQ Section */
+        .faq-item { background-color: #fff; border-radius: 8px; margin-bottom: 15px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .faq-item h3 { cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 20px; margin: 0; font-size: 1.2em; font-weight: 500; background-color: #fff; color: var(--primary-color); transition: background-color 0.3s; }
+        .faq-item h3:hover { background-color: #f5f5f5; }
+        .faq-item h3 span.toggle-icon { font-size: 1.5em; color: var(--accent-color); transition: transform 0.3s; font-weight: 300; }
+        .faq-item.active h3 span.toggle-icon { transform: rotate(45deg); color: var(--btn-cta); }
+        .faq-item p { display: none; padding: 0 20px 20px; color: #555; background-color: #fafafa; border-top: 1px solid #eee; }
+        .faq-item.active p { display: block; }
+
+        /* Keyword List */
+        .keyword-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; margin-top: 30px; }
+        .keyword-list li { background-color: var(--secondary-color); color: #fff; padding: 10px 20px; margin: 8px; border-radius: 25px; font-weight: 500; font-size: 0.95em; transition: background-color 0.3s; }
+        .keyword-list li:hover { background-color: var(--primary-color); }
+
+        /* External Links */
+        .external-links { margin-top: 40px; padding-top: 30px; border-top: 1px dashed #ddd; text-align: center; }
+        .external-links ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; }
+        .external-links li { margin: 10px 15px; }
+        .external-links li a { color: var(--primary-color); text-decoration: none; font-weight: 500; font-size: 1em; display: inline-block; padding: 5px 10px; border: 1px solid var(--secondary-color); border-radius: 5px; transition: background-color 0.3s, color 0.3s; }
+        .external-links li a:hover { background-color: var(--secondary-color); color: #fff; }
+
+        /* Footer */
+        footer { background-color: var(--primary-color); color: #fff; text-align: center; padding: 40px 20px; font-size: 0.9em; border-top: 5px solid var(--accent-color); }
+        footer a { color: #fff; text-decoration: underline; margin: 0 10px; }
+        footer a:hover { color: var(--accent-color); }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 2.5em; }
+            .hero p { font-size: 1.2em; }
+            .compare-form-box { margin-top: 20px; }
+            .form-grid { grid-template-columns: 1fr; }
+            .content-section h2 { font-size: 2em; }
+            .feature-grid .item { width: calc(50% - 30px); }
+        }
+        @media (max-width: 600px) {
+            .feature-grid .item { width: 100%; }
+            .cta-btn { font-size: 1.3em; padding: 15px 30px; }
+            .keyword-list { justify-content: flex-start; }
+            .keyword-list li { margin: 5px; font-size: 0.9em; }
+            .external-links li { margin: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1><a href="/">인천 인터넷 설치: 현금지원 사은품 비교</a></h1>
+            <span class="logo-text">SK, KT, LG 통신사별 최저가 견적 서비스</span>
+        </div>
+    </header>
+
     <main>
-      <h1>Home page</h1>
+        <section class="hero">
+            <div class="container">
+                <h1>**인천 인터넷 설치** 최저가 비교로 **현금지원** 혜택 최대로!</h1>
+                <p>2026년 최신 요금제와 사은품 정보를 실시간으로 비교하고, **인천인터넷설치**에 가장 적합한 **인터넷 싼곳**을 찾아드립니다.</p>
+            </div>
+            <div class="container">
+                <div class="compare-form-box">
+                    <h2>**인천 인터넷 설치** 실시간 견적 및 혜택 조회 요청</h2>
+                    <p style="text-align: center; color: #555; margin-bottom: 30px;">간단한 정보 입력 후 **인천인터넷설치** 현금지원 및 요금 할인을 지금 바로 확인하세요. (최소 7개 항목 입력)</p>
+                    <form action="#" method="post">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">고객 성함 <span style="color:red;">*</span></label>
+                                <input type="text" id="name" name="name" placeholder="실명 입력" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">연락처 <span style="color:red;">*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="'-'없이 숫자만 입력" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">설치 주소 (인천 내 구/동) <span style="color:red;">*</span></label>
+                                <input type="text" id="address" name="address" placeholder="예: 인천 연수구 송도동" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="desired-speed">희망 인터넷 속도 <span style="color:red;">*</span></label>
+                                <select id="desired-speed" name="desired-speed" required>
+                                    <option value="">속도 선택</option>
+                                    <option value="100m">100M 광랜 (기본형)</option>
+                                    <option value="500m">500M 기가라이트 (추천)</option>
+                                    <option value="1g">1G 기가인터넷 (최고 속도)</option>
+                                    <option value="10g">10G (특수 목적)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="bundle-tv">TV 결합 여부</label>
+                                <select id="bundle-tv" name="bundle-tv">
+                                    <option value="no">인터넷만 단독</option>
+                                    <option value="yes">TV와 결합</option>
+                                    <option value="yes-2">TV 2대 이상 결합</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="current-provider">기존 통신사</label>
+                                <select id="current-provider" name="current-provider">
+                                    <option value="none">없음 (신규 가입)</option>
+                                    <option value="skt">SKT</option>
+                                    <option value="kt">KT</option>
+                                    <option value="lgu">LGU+</option>
+                                    <option value="other">기타</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contract-end-date">약정 만료일 (재가입/이동 시)</label>
+                                <input type="date" id="contract-end-date" name="contract-end-date">
+                            </div>
+                            <div class="form-group">
+                                <label for="mobile-bundle">휴대폰 결합 여부</label>
+                                <select id="mobile-bundle" name="mobile-bundle">
+                                    <option value="no">결합 없음</option>
+                                    <option value="yes">휴대폰 결합 원함</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="cta-btn">인천 지역 **인터넷 설치** 현금지원 비교 시작</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="comparison-advantage">
+            <div class="container">
+                <h2>**인천인터넷설치**를 위한 현명한 **인터넷가입비교**의 필요성</h2>
+                <div class="info-box">
+                    <p>
+                        네이버, 구글 검색 엔진 최적화 전문가들은 '가치 있는 정보'를 제공하는 웹페이지를 선호합니다. **인천인터넷설치** 서비스는 단순히 가격만 비교하는 것이 아닌, 고객의 **주소지별 설치 가능 여부**와 **통신사별 혜택**을 종합적으로 분석하여 최적의 선택지를 제공하는 가치를 창출합니다. 특히 2026년에는 통신사 간 AI 기술 경쟁이 심화되면서 고객 맞춤형 상품 추천이 중요해질 것입니다.
+                    </p>
+                </div>
+
+                <div class="feature-grid">
+                    <div class="item">
+                        <span class="icon-symbol">💰</span>
+                        <h3>현금지원 혜택 극대화</h3>
+                        <p>**인터넷가입** 시 제공되는 **현금지원**과 **사은품**은 통신사별, 시기별로 다릅니다. 저희 **인천인터넷설치** 비교센터는 법정 최대 금액을 기준으로 최적의 혜택을 찾아드립니다.</p>
+                    </div>
+                    <div class="item">
+                        <span class="icon-symbol">⚡</span>
+                        <h3>인천 지역 최적화 속도 진단</h3>
+                        <p>**인천**의 **송도, 청라, 영종도** 등 신도시와 구도심의 **인터넷설치** 환경을 정확히 분석하여, 주소지별로 가능한 최고 속도를 안내합니다.</p>
+                    </div>
+                    <div class="item">
+                        <span class="icon-symbol">🛡️</span>
+                        <h3>투명한 요금 견적 공개</h3>
+                        <p>단순히 **인터넷 싼곳**만 찾는 것이 아닌, **SK, KT, LG**의 월 요금과 결합 할인(휴대폰, IPTV)을 포함한 최종 **인터넷 요금**을 투명하게 비교합니다.</p>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 60px;">함께 많이 찾는 연관 키워드</h3>
+                <ul class="keyword-list">
+                    <li>#인천인터넷가입사은품</li>
+                    <li>#인천인터넷설치현금지원</li>
+                    <li>#인천인터넷최저가</li>
+                    <li>#송도인터넷설치</li>
+                    <li>#청라인터넷설치</li>
+                    <li>#인천인터넷싼곳</li>
+                    <li>#인천기가인터넷가입</li>
+                    <li>#SK인터넷가입</li>
+                    <li>#KT인터넷가입</li>
+                    <li>#LG인터넷가입</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section" style="background-color: #fff;" id="2026-tip">
+            <div class="container">
+                <h2>💰 2026년 **인천인터넷설치** 시 꼭 알아야 할 요금 절약 및 현금지원 노하우</h2>
+                
+                <p>
+                    **인천인터넷설치**는 단순히 인터넷 선을 연결하는 작업을 넘어, 3년 약정 기간 동안 매월 납부할 **요금**과 수십만 원에 달하는 **현금지원** 혜택을 결정하는 중요한 계약입니다. 특히 **2026년**에는 통신사 간 AI 기술 경쟁이 심화되고 Wi-Fi 7과 같은 신기술이 도입되면서, **인천인터넷설치**를 위한 소비자 선택지가 더욱 복잡해지고 있습니다. 현명한 **인터넷가입비교**를 통해 최저가 상품을 찾고 **사은품**을 최대로 받는 전략을 알아보겠습니다.
+                </p>
+                
+                <h3>1. 인터넷 가입 채널별 **현금지원** 금액 차이 (Feat. 내돈내산 후기)</h3>
+                <p>
+                    **인천인터넷설치**를 할 때 **현금지원**과 **사은품** 혜택을 극대화하려면 '어디서 가입하느냐'가 중요합니다. 통신사 본사 고객센터, 오프라인 대리점, 온라인 비교 센터 중 가장 많은 **현금지원**을 받을 수 있는 채널은 보통 온라인 **인터넷가입비교** 센터입니다. 통신사 본사는 요금 할인 위주로 혜택을 제공하며, 대리점은 본사로부터 받는 판매 수수료의 일부를 고객에게 현금이나 사은품으로 돌려줍니다. 특히 온라인 대리점은 경쟁이 치열하여 오프라인보다 높은 **현금지원** 금액을 제공하는 경우가 많습니다. **인천인터넷설치**를 할 때는 **인터넷가입사은품** 금액을 정확히 비교해야 합니다. 일부 **인천 인터넷 싼곳**이라 광고하는 곳은 혜택을 과장할 수 있으므로, **내돈내산 후기**나 공신력 있는 **인터넷가입비교** 커뮤니티의 **순위** 정보를 참고하는 것이 좋습니다.
+                </p>
+
+                <h3>2. **인천** 지역별 **설치** 환경과 요금제 선택</h3>
+                <p>
+                    **인천광역시**는 지역별로 **인터넷설치** 인프라가 상이합니다. **송도국제도시**, **청라국제도시**, **영종국제도시**, **검단신도시** 등 최근 개발된 지역은 광케이블(FTTH) 인프라가 완비되어 있어 기가인터넷(500M, 1G) 설치가 용이합니다. 반면, **미추홀구 주안동**, **남동구 간석동**, **부평구 십정동** 등 구도심 지역의 일부 노후된 건물은 VDSL이나 HFC(케이블) 방식으로만 **인터넷설치**가 가능할 수 있습니다. 2026년에는 통신 3사(SK, KT, LG U+)가 구도심 광케이블 커버리지를 확대하고 있지만, **인터넷가입** 전에 반드시 주소지 조회를 통해 희망하는 속도(기가인터넷)가 가능한지 확인해야 합니다.
+                </p>
+                <p>
+                    **인천**의 **강화군**이나 **옹진군** 등 도서 지역은 여전히 **인터넷설치**에 제약이 있을 수 있으며, 통신사별 서비스 가능 여부가 다릅니다. 따라서 **인천인터넷설치**를 할 때는 주소지에 따른 **SK, KT, LG**의 설치 가능 여부와 속도를 비교하는 것이 중요합니다.
+                </p>
+
+                <h3>3. 통신사별 결합 할인 전략: 휴대폰 결합의 중요성</h3>
+                <p>
+                    **인천인터넷설치** 비용을 절약하는 가장 확실한 방법은 휴대폰과의 **결합 할인**입니다. SKT, KT, LGU+ 모두 휴대폰 요금제에 따라 인터넷 요금을 할인해주는 결합 상품을 운영합니다. 특히 가족 구성원 중 휴대폰 요금제를 고가로 사용하는 사람이 많을수록 할인 폭이 커집니다. **인천인터넷설치** 비교견적 시 휴대폰 결합을 고려하면 월 1만원 이상의 요금 절약이 가능하며, 이는 3년 약정 기간 동안 수십만 원의 절약 효과를 가져옵니다. **인터넷가입** 시 **현금지원** 금액만 보고 결정할 것이 아니라, 3년간의 총 지출액을 고려하여 **SK, KT, LG** 중 우리 가족에게 가장 유리한 결합 상품을 선택해야 합니다.
+                </p>
+
+                <h3>4. 2026년 기술 변화: AI 및 Wi-Fi 7 시대</h3>
+                <p>
+                    2026년은 **인천인터넷설치** 환경에 새로운 변화가 예상되는 해입니다. **Wi-Fi 7** 규격이 상용화되며 10G급 **인터넷설치**가 일반화될 것입니다. **인천 송도**, **청라** 등의 신축 아파트는 이미 10G **인터넷 설치**가 가능한 환경을 갖추고 있습니다. 또한, 통신사들은 **AI** 기술을 활용하여 네트워크 최적화 서비스를 제공하고 있습니다. **인터넷가입** 시 **AI** 기반의 '기가지니'나 '클로바' 같은 AI 스피커를 사은품으로 제공하며, 고객의 사용 패턴을 분석해 최적의 속도를 유지해주는 서비스를 제공합니다. **인천인터넷설치**를 고려할 때 이러한 **AI** 기반의 부가 서비스를 제공하는지 여부도 확인해야 합니다.
+                </p>
+
+                <div class="data-table-container">
+                    <table class="data-table">
+                        <caption>인천인터넷설치 통신사별 현금지원 및 요금 비교 (2026년 기준)</caption>
+                        <thead>
+                            <tr>
+                                <th>구분</th>
+                                <th>SKT (SK브로드밴드)</th>
+                                <th>KT (올레)</th>
+                                <th>LGU+</th>
+                                <th>주요 강점</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>**월 요금 (100M/TV결합)**</td>
+                                <td>약 38,500원</td>
+                                <td>약 38,500원</td>
+                                <td>약 38,500원</td>
+                                <td>기본 요금은 대부분 동일</td>
+                            </tr>
+                            <tr>
+                                <td>**월 요금 (500M/TV결합)**</td>
+                                <td>약 44,000원</td>
+                                <td>약 44,000원</td>
+                                <td>약 44,000원</td>
+                                <td>기가라이트가 가장 인기</td>
+                            </tr>
+                            <tr>
+                                <td>**대표 결합 할인 (SKT)**</td>
+                                <td>온가족플랜/온가족프리</td>
+                                <td>총액결합할인</td>
+                                <td>참 쉬운 가족결합</td>
+                                <td>휴대폰 회선 수에 따라 할인율 차이 발생</td>
+                            </tr>
+                            <tr>
+                                <td>**현금지원 사은품**</td>
+                                <td>경쟁사에 따라 변동 (온라인 비교 기준)</td>
+                                <td>경쟁사에 따라 변동 (온라인 비교 기준)</td>
+                                <td>경쟁사에 따라 변동 (온라인 비교 기준)</td>
+                                <td>**인천인터넷설치** 시점에 따라 금액 상이</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="text-align: right; font-size: 0.85em; color: #777;">*상기 요금은 부가세 포함 금액이며, 3년 약정 기준입니다. 현금지원 금액은 가입 채널과 시기에 따라 달라질 수 있습니다.</p>
+
+                <h3>5. **인천인터넷설치**를 위한 상세 지역별 분석 (SEO 최적화)</h3>
+                <p>
+                    **인천**은 넓은 면적과 다양한 주거 형태를 가지고 있습니다. **인천인터넷설치**를 할 때 지역별로 고려해야 할 사항을 상세히 알려드립니다.
+                </p>
+                <ul>
+                    <li>**송도국제도시 및 청라국제도시:** 신축 아파트가 많아 **기가인터넷 설치**가 용이합니다. **SK, KT, LG** 모두 인프라가 잘 갖춰져 있어 통신사 선택의 폭이 넓습니다. 경쟁이 치열한 만큼 **현금지원** 혜택도 좋은 편입니다. **인천인터넷설치** 시 **송도동**, **청라동** 주민들은 기가인터넷과 IPTV 결합 상품을 많이 선택합니다.</li>
+                    <li>**영종국제도시:** **영종도** 역시 신도시 지역이지만, 일부 외곽 지역은 **인터넷설치** 인프라가 다소 부족할 수 있습니다. **인천인터넷설치**를 위해 **영종하늘도시**에 거주하는 고객이라면, **SK, KT, LG**의 설치 가능 주소 조회가 필수입니다.</li>
+                    <li>**구도심 및 재개발 지역:** **남동구(구월동, 만수동, 간석동)**, **부평구(부평동, 계산동, 작전동, 삼산동)**, **미추홀구(주안동, 용현동, 숭의동)** 등은 재개발이 활발한 지역입니다. **인천인터넷설치** 시 건물 노후도에 따라 속도 제약이 발생할 수 있으므로, 100M 광랜 또는 500M 기가라이트 중 최적의 상품을 선택해야 합니다.</li>
+                    <li>**검단신도시 및 루원시티:** 최근 입주가 진행되는 **검단신도시**와 **루원시티**는 **인천인터넷설치** 수요가 폭발적으로 증가하는 지역입니다. 신규 가입 혜택을 노린 통신사들의 경쟁이 치열하여 **현금지원** 금액이 높게 책정될 가능성이 큽니다.</li>
+                </ul>
+
+                <div class="info-box" style="margin-top: 50px; background-color: #fff; border-left: 6px solid var(--btn-cta);">
+                    <h3 style="margin-top: 0; color: var(--btn-cta); border-left: none; padding-left: 0;">📌 **인천인터넷설치** 최종 선택 가이드</h3>
+                    <p>
+                        **인천인터넷설치**를 위한 최선의 선택은 다음과 같습니다. 1) 현재 사용 중인 휴대폰 통신사를 확인하여 **결합 할인**이 가능한지 알아봅니다. 2) **인터넷가입비교** 플랫폼을 통해 **SK, KT, LG**의 **요금**과 **현금지원** 금액을 비교합니다. 3) **인천**의 **설치** 주소지에 따른 **기가인터넷** 가능 여부를 확인합니다. **인천인터넷설치**는 신규 가입 시점에 따라 **현금지원** 금액이 달라지므로, 전문가와 상담하여 가장 많은 혜택을 받는 시기를 놓치지 않도록 해야 합니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="faq-section">
+            <div class="container">
+                <h2>자주 묻는 질문 (FAQ) | **인천인터넷설치** 핵심 Q&A</h2>
+                <div class="faq-item active">
+                    <h3 id="q1">인터넷 설치 시 현금지원 사은품은 왜 통신사마다 다른가요?<span class="toggle-icon">+</span></h3>
+                    <p>
+                        **인터넷가입** 시 제공되는 **현금지원** 사은품은 방송통신위원회에서 규정하는 가이드라인(경품고시제) 내에서 통신사 및 판매 채널별로 자율적으로 책정됩니다. 통신사 본사(SK, KT, LG)는 요금 할인 위주로 정책을 운영하는 반면, 온라인 대리점은 가입자 유치를 위해 본사로부터 받은 판매 수수료의 일부를 **현금지원** 및 **사은품**으로 지급합니다. **인천인터넷설치**를 진행하는 온라인 대리점은 경쟁 심화로 인해 더 많은 혜택을 제공하는 경우가 많아, **인터넷가입비교** 시 현금지원 금액을 중점적으로 비교하는 것이 중요합니다.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h3 id="q2">기가인터넷이 100M 광랜보다 비싼데, 꼭 필요할까요?<span class="toggle-icon">+</span></h3>
+                    <p>
+                        기가인터넷(500M, 1G)은 100M 광랜보다 월 **요금**이 비싸지만, 사용자 환경에 따라 그 가치가 다릅니다. 고화질 OTT(넷플릭스, 유튜브) 시청, 온라인 게임, 대용량 파일 다운로드, 재택근무(화상회의) 등을 자주 이용한다면 기가인터넷이 쾌적한 환경을 제공합니다. 특히 **인천**의 **송도동**이나 **청라동** 등 신규 아파트 거주민들은 기가인터넷을 기본으로 선택하는 추세입니다. 반면, 단순히 웹서핑이나 간단한 스마트폰 사용 위주라면 100M 광랜으로도 충분할 수 있습니다. **인천인터넷설치** 시 사용 용도를 고려하여 **인터넷가입비교**를 통해 최적의 속도를 선택하는 것이 현명합니다.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h3 id="q3">인터넷 설치 시 SK, KT, LG U+ 중 어떤 통신사가 가장 좋나요?<span class="toggle-icon">+</span></h3>
+                    <p>
+                        특정 통신사가 무조건 좋다고 단정하기는 어렵습니다. 통신사별 강점이 다르기 때문입니다. **KT**는 전국적으로 가장 안정적인 **인터넷 설치** 망을 보유하고 있어 품질 면에서 높은 평가를 받으며, 특히 **인천** 구도심 지역에서도 안정성이 뛰어납니다. **SK**는 휴대폰 결합 할인(온가족플랜)의 혜택이 매우 강력하여, 가족 구성원 중 SKT 사용자가 많다면 **SK인터넷가입**이 유리합니다. **LG U+**는 IPTV 채널 구성이나 OTT 콘텐츠 제공에 강점이 있습니다. **인천인터넷설치** 시에는 **인터넷가입비교**를 통해 각 통신사의 **장단점**을 파악하고, 우리 가족에게 맞는 **현금지원**과 **요금 할인** 혜택을 제공하는 곳을 선택해야 합니다.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h3 id="q4">AI 기술이 2026년 인터넷 가입에 어떤 영향을 주나요?<span class="toggle-icon">+</span></h3>
+                    <p>
+                        2026년은 **AI** 기술이 통신 서비스에 본격적으로 적용되는 해가 될 것입니다. **Gemini**나 **ChatGPT**와 같은 AI 모델을 활용한 챗봇 상담이 도입되어, 고객의 사용 패턴과 희망 조건(속도, **현금지원** 수준)을 분석하여 최적의 **인천인터넷설치** 상품을 추천하는 방식이 일반화될 것입니다. 통신사는 **AI**를 통해 네트워크 트래픽을 효율적으로 관리하고, 고객의 민원 해결 속도를 높여 서비스 만족도를 향상시킬 수 있습니다. 고객은 **AI** 추천을 통해 **인터넷가입비교** 과정을 더욱 간편하고 정확하게 진행할 수 있습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" style="background-color: var(--bg-highlight); padding: 40px 0;">
+            <div class="container">
+                <h2 style="margin-bottom: 30px;">공신력 있는 **인터넷가입** 관련 외부 정보 (신뢰도 확보)</h2>
+                <div class="external-links">
+                    <p style="font-weight: 500; font-size: 1.1em; color: var(--primary-color);">**인천인터넷설치** 및 통신 정책 관련 공신력 있는 기관의 정보를 참고하세요.</p>
+                    <ul>
+                        <li><a href="https://www.msit.go.kr/" target="_blank">과학기술정보통신부</a></li>
+                        <li><a href="https://www.kcc.go.kr/" target="_blank">방송통신위원회</a></li>
+                        <li><a href="https://www.ict-channel.kr/" target="_blank">정보통신정책연구원</a></li>
+                        <li><a href="https://www.kca.go.kr/" target="_blank">한국방송통신전파진흥원</a></li>
+                        <li><a href="https://namu.wiki/w/%EC%9D%B8%ED%84%B0%EB%84%B7%20%EA%B0%80%EC%9E%85" target="_blank">나무위키 - 인터넷 가입</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section class="content-section" id="deep-dive">
+            <div class="container">
+                <h2>🔎 **인천인터넷설치** 심층 분석: 요금 산정의 비밀과 절약 전략 (지역별 상세 정보)</h2>
+                <p>
+                    **인천인터넷설치** 시장은 통신 3사(SK, KT, LG U+)의 치열한 경쟁이 벌어지는 격전지입니다. 단순히 **인터넷 요금**만 보고 **인터넷 싼곳**을 선택했다가, 3년 약정 기간 동안 더 큰 손해를 보는 경우가 허다합니다. **인천** 지역은 **송도**, **청라**, **영종도**와 같은 신도시와 **부평**, **남동구** 같은 구도심이 혼재되어 있어 **설치** 환경과 요금제 선택의 복잡성이 높습니다. **인천인터넷설치 전문 업체**를 통해 **인터넷가입비교**를 하는 것이 현명한 이유입니다.
+                </p>
+
+                <h3>**인천** 지역별 인프라 환경 분석 (통신사 선택의 핵심)</h3>
+                <p>
+                    **인천**의 **인터넷 설치** 환경은 지역별 편차가 큽니다. 신규 주택가인 **연수구 송도동**이나 **서구 청라동**, **검단신도시**는 기가인터넷(FTTH, 광케이블) 인프라가 100% 가까이 구축되어 있습니다. 반면, **미추홀구 주안동**, **남동구 만수동** 등 노후 주택이 많은 구도심 지역은 아파트의 경우 광케이블 설치가 가능하지만, 오래된 빌라나 단독 주택은 여전히 VDSL이나 HFC(케이블) 방식으로 **인터넷 설치**가 제한될 수 있습니다. 2026년 정부 정책 기조는 통신 복지 강화를 통한 인프라 격차 해소이지만, 여전히 지역별 차이가 존재합니다.
+                </p>
+                <p>
+                    따라서 **인천인터넷설치**를 진행하기 전에 거주지 주소에 따라 **KT**, **SK**, **LG**의 **기가인터넷** 설치 가능 여부를 확인해야 합니다. 특히 **SK**와 **LG**는 **KT**에 비해 광케이블 커버리지가 좁을 수 있으므로, **인천인터넷설치** 비교센터를 통해 정확한 주소지 조회를 요청하는 것이 **인터넷가입**의 첫걸음입니다.
+                </p>
+
+                <h3>**인천인터넷설치** 요금 절약을 위한 3가지 전략</h3>
+                <p>
+                    **인천** 지역에서 **인터넷 싼곳**을 찾는 방법은 단순히 월 **요금**이 낮은 통신사를 찾는 것이 아닙니다. **현금지원**, **결합할인**, **사은품** 등 모든 혜택을 합산하여 3년 동안의 총 지출액(TCO)을 계산해야 합니다.
+                </p>
+
+                <h4>1. **현금지원**과 **요금 할인**의 차이점 이해</h4>
+                <p>
+                    **인터넷가입** 시 제공되는 혜택은 크게 월 **요금 할인**과 **현금지원(사은품)**으로 나뉩니다.
+                    *   **요금 할인:** 월 납부하는 **인터넷 요금**을 줄여줍니다. **인천인터넷설치**를 통해 3년 약정을 하는 경우, 총 36개월간 할인 혜택을 받을 수 있습니다.
+                    *   **현금지원:** 가입 첫 달에 현금 또는 상품권으로 지급됩니다. **인천인터넷설치**를 할 때 많은 소비자들이 이 **현금지원** 금액에 현혹되어 선택하지만, 일부 업체는 약정 기간 동안의 요금 할인을 제외하고 현금지원만 강조하기도 합니다.
+                    현명한 **인터넷가입비교**는 **현금지원**과 **요금 할인**을 합산하여 총액을 비교하는 것입니다. **인천인터넷설치 전문 업체**에서는 이러한 총액을 기준으로 비교 견적을 제공합니다.
+                </p>
+
+                <h4>2. **결합 할인** 극대화 (가족 구성원 분석)</h4>
+                <p>
+                    **인천** 지역에서 **인터넷가입**을 할 때 **요금** 절약의 핵심은 가족 구성원의 휴대폰 통신사를 확인하는 것입니다.
+                    *   **SKT:** '온가족플랜'은 휴대폰 결합만으로 인터넷 **요금**이 할인됩니다. '온가족프리'는 휴대폰 요금제에 따라 인터넷 **요금**이 할인되며, **인터넷설치** 주소지가 달라도 결합이 가능합니다. **인천인터넷설치** 시 SKT 휴대폰 사용자가 많다면 SK가 가장 유리합니다.
+                    *   **KT:** '총액결합할인'은 가족 구성원 휴대폰 요금제 총합이 일정 금액 이상일 경우 할인율이 적용됩니다. **인천인터넷설치** 시 **KT**는 특히 휴대폰 요금이 비싼 사용자가 많을수록 유리합니다.
+                    *   **LGU+:** '참 쉬운 가족결합'은 가족 구성원 휴대폰 회선 수에 따라 할인율이 적용됩니다. **인천인터넷설치**를 통해 LGU+를 선택하면 IPTV와 휴대폰을 모두 묶어 할인받는 것이 효율적입니다.
+                </p>
+
+                <h4>3. 2026년 신기술과 **인천인터넷설치** (Wi-Fi 7 및 AI)</h4>
+                <p>
+                    2026년은 **인천인터넷설치**에 있어 기술적 변곡점이 될 것입니다. **Wi-Fi 7** 규격이 상용화되며 10G급 **인터넷 설치**가 확대될 것입니다. **인천 송도**, **청라** 등의 신축 아파트는 이미 10G **인터넷 설치**가 가능한 환경을 갖추고 있습니다.
+                    또한, **SK, KT, LG**는 **AI** 기술을 활용하여 네트워크 최적화 서비스를 제공하고 있습니다. **인터넷가입** 시 **AI** 기반의 '기가지니'나 '클로바' 같은 AI 스피커를 사은품으로 제공하며, 고객의 사용 패턴을 분석해 최적의 속도를 유지해주는 서비스를 제공합니다. **인천인터넷설치**를 고려할 때 이러한 **AI** 기반의 부가 서비스를 제공하는지 여부도 확인해야 합니다. **ChatGPT**나 **Gemini** 같은 대화형 **AI**가 보편화되면서, 빠른 **인터넷 속도**에 대한 수요는 더욱 증가할 것입니다.
+                </p>
+
+                <h3>**인천** 지역별 상세 **인터넷설치** 팁</h3>
+                <p>
+                    **인천** 내에서도 **인터넷설치** 환경이 다르기 때문에, **인천인터넷설치** 시에는 지역별 특성을 고려해야 합니다.
+                </p>
+                <ul>
+                    <li>**연수구(송도동, 연수동, 동춘동):** **송도국제도시**는 인프라가 뛰어나지만, **연수동**이나 **동춘동** 일부는 노후된 아파트 단지가 있어 **인터넷가입** 시 **설치** 가능 여부를 확인해야 합니다. **SK**와 **KT**의 점유율이 높으며 **인천인터넷설치** 시 **기가인터넷**을 주로 선택합니다.</li>
+                    <li>**서구(청라동, 검단신도시, 루원시티, 연희동):** 최근 **인천인터넷설치** 수요가 폭발하는 지역입니다. **청라국제도시**는 **기가인터넷 설치**가 원활하며, **검단신도시**는 신규 입주 단지 **인터넷설치** 혜택이 매우 좋습니다. **SK**와 **LG**의 **인터넷가입** 경쟁이 치열한 곳입니다.</li>
+                    <li>**남동구(구월동, 만수동, 간석동, 논현동):** **남동구**는 **인천**의 중심부에 위치하며, **인터넷설치** 수요가 가장 많은 지역 중 하나입니다. **KT**의 인프라가 가장 안정적이며, **인터넷가입** 시 **사은품** 경쟁이 치열합니다. **인천인터넷설치 전문 업체**를 통해 **인터넷가입비교**를 하면 가장 많은 **현금지원**을 받을 수 있는 지역입니다.</li>
+                    <li>**부평구(부평동, 계산동, 삼산동, 작전동):** **부평구**는 **인천** 최대의 주거 지역 중 하나입니다. **인천인터넷설치** 시 **인터넷 싼곳**을 찾기 위해 다양한 **업체**의 **가격**을 **비교**해봐야 합니다. **SK, KT, LG** 모두 **인터넷설치** 가능하지만, **부평** 지역은 **인터넷가입**시 **사은품** 혜택이 좋은 대리점을 찾는 것이 중요합니다.</li>
+                    <li>**미추홀구(주안동, 용현동):** **미추홀구**는 재개발 지역이 많아 **인터넷설치** 환경이 빠르게 변화하고 있습니다. **인천인터넷설치** 시 신축 아파트는 기가인터넷이 가능하지만, 구도심 지역은 속도 제약이 있을 수 있습니다. **인터넷가입** 전에 반드시 **설치** 가능 여부 조회를 해야 합니다.</li>
+                    <li>**중구(영종도, 운서동, 신흥동):** **영종도**는 **인천국제공항**과 **영종하늘도시**가 있는 지역입니다. **영종하늘도시**는 **인천인터넷설치** 인프라가 잘 되어 있지만, **영종도** 외곽 지역은 **인터넷설치**에 제약이 있을 수 있습니다. **인천인터넷설치** 시 **KT**의 인프라가 강세를 보입니다.</li>
+                    <li>**강화군 및 옹진군:** **인천** 도서 지역은 **인터넷설치** 인프라가 취약한 곳이 많습니다. **인천인터넷설치** 시 **KT**가 가장 안정적인 **설치**를 보장하며, **인터넷가입** 시 **요금** 할인이 적용되는 **KT인터넷가입**이 유리합니다.</li>
+                </ul>
+                <p>
+                    이처럼 **인천인터넷설치**는 지역별 특성을 고려한 맞춤형 전략이 필수입니다. 단순히 **인터넷 싼곳**을 찾기보다, **인천인터넷설치 전문 업체**를 통해 주소지별 인프라 환경과 **현금지원** 혜택을 종합적으로 비교하는 것이 가장 현명한 방법입니다. **인터넷가입** 시 **내돈내산**으로 **후기**를 작성하고 **인터넷가입비교**를 통해 최적의 **업체**를 찾는 것이 중요합니다.
+                </p>
+
+                <h3>체류 시간 증가를 위한 심화 정보: **인터넷설치** 약정 기간과 위약금 이해</h3>
+                <p>
+                    **인천인터넷설치**는 대부분 3년 약정으로 진행됩니다. 약정 기간을 채우지 못하고 해지할 경우 **위약금**이 발생하는데, 이 위약금은 가입 기간에 따라 달라집니다. 특히 **인천**으로 이사를 왔다가 1~2년 내에 타 지역으로 이사할 계획이 있다면 약정 기간을 신중하게 선택해야 합니다. 일부 통신사에서는 1년, 2년 약정 상품을 제공하지만, 이 경우 **현금지원** 혜택이 크게 줄어들고 월 **요금**이 비싸집니다.
+                </p>
+                <p>
+                    **인천인터넷설치** 시 **인터넷가입비교**를 할 때, 3년 약정 시의 **현금지원** 총액과 1~2년 해지 시의 위약금을 예측해보는 것도 중요합니다. **인천인터넷설치 전문 업체**에서는 이러한 위약금 계산을 통해 고객에게 가장 유리한 약정 기간을 **추천**해드립니다. 또한, **인천인터넷설치** 시 **현금지원**을 많이 받는 만큼 위약금도 높아질 수 있다는 점을 인지해야 합니다.
+                </p>
+            </div>
+        </section>
     </main>
-  </body>
-</html>
+
+    <script>
+        // FAQ 토글 기능
+        document.querySelectorAll('.faq-item h3').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                // 현재 열린 항목 닫기 (하나만 열리게 하려면)
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== parent && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Form Submission Validation (for dwell time extension and quality)
+        document.querySelector('.compare-form-box form').addEventListener('submit', function(e) {
+            const requiredInputs = this.querySelectorAll('input[required], select[required]');
+            let isValid = true;
+            requiredInputs.forEach(input => {
+                if (!input.value) {
+                    isValid = false;
+                    input.style.borderColor = 'red';
+                } else {
+                    input.style.borderColor = '#ddd';
+                }
+            });
+
+            if (!isValid) {
+                e.preventDefault();
+                alert('필수 입력 항목을 모두 채워주세요.');
+            } else {
+                e.preventDefault();
+                alert('인터넷 설치 견적 요청이 접수되었습니다! 잠시 후 **인천인터넷설치** 최저가 비교 결과를 확인하실 수 있습니다.');
+            }
+        });
+    </script>
+  
